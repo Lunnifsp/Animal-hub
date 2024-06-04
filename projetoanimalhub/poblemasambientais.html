@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-luanna.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+<style>
+    .titulo {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .poluicao h1 {
+
+        font-size: 30px;
+        text-align: left;
+
+    }
+
+    .poluicao p {
+        padding: 25px;
+    }
+
+    .corpo {
+        padding: 20px;
+    }
+
+
+
+    .poluiçãoatomosferica {
+        display: flex;
+        justify-content: space-between;
+        /* Coloca espaço entre os itens */
+    }
+
+    .text-left {
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .text-right {
+        padding: 20px;
+        font-size: 30px;
+
+    }
+
+    .card {
+        margin: 20px;
+        width: 95%;
+        /* Largura do card */
+        height: 465px;
+        /* Altura do card */
+        border-radius: 10px;
+        /* Borda arredondada */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        /* Sombra suave */
+        overflow: hidden;
+        /* Esconde qualquer parte da imagem que ultrapasse os limites do card */
+    }
+
+    img {
+        width: 100%;
+        /* Oculta a largura da imagem */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        display: block;
+        /* Remove espaços em branco abaixo da imagem */
+    }
+
+
+
+    .aquecimento h2,
+    p {
+        padding: 20px;
+    }
+
+    .aquecimento2 {
+        margin: 30px;
+        padding: 20px;
+        width: 95%;
+        /* Largura do card */
+        border: 5px solid #000000;
+        /* Borda só para visualização */
+        border-radius: 8px;
+        /* Borda arredondada */
+        overflow: hidden;
+        /* Esconde qualquer conteúdo que ultrapasse os limites do card */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .conteudo {
+        display: flex;
+        /* Utiliza flexbox para alinhar os elementos */
+    }
+
+    .texto {
+        flex: 1;
+        /* Ocupa todo o espaço disponível */
+        padding: 20px;
+        /* Espaçamento interno */
+    }
+
+    .imagem {
+        flex: 1;
+        /* Ocupa todo o espaço disponível */
+        display: flex;
+        /* Utiliza flexbox para alinhar a imagem */
+        justify-content: flex-end;
+        /* Alinha a imagem à direita */
+        align-items: center;
+        /* Centraliza a imagem verticalmente */
+    }
+
+    .imagem img {
+        max-width: 100%;
+        /* Garante que a imagem não ultrapasse o contêiner */
+        max-height: 100%;
+        /* Garante que a imagem não ultrapasse o contêiner */
+    }
+
+    .container {
+        border: 5px solid #ffffff;
+        padding: 20px;
+        max-width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Para conter o texto ao lado das imagens */
+        display: flex;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.99);
+    }
+
+    .images-container {
+
+        float: left;
+        margin-right: 10px;
+        max-width: 45%;
+    }
+
+    .images-container img {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .text-container {
+        flex: 1;
+        /* Ocupa o restante do espaço disponível */
+    }
+
+
+    .desmatamento,
+    top-texto {
+        margin-top: 50px;
+    }
+
+    .desmatamento,
+    p {
+        padding: 20px;
+    }
+
+    .desmatamento img {
+        width: 100%;
+        height: auto;
+        transform: translateY(-1300px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.99);
+    }
+
+
+
+
+    table {
+        height: 300px;
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.99);
+        border-radius: 10px;
+    }
+
+    th,
+    td {
+        font-size: 25px;
+        width: 75%;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 5px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+
+<body>
+    <div class="box">
+        <div class="contaner">
+
+            <!-- Cabeçalho -->
+            <header>
+                <nav class="navbar flex">
+                    <div class="logo">
+                        <img src="img/logo-nav.png" />
+                    </div>
+    
+                    <div class="links">
+                        <ul class="flex">
+                            <li class="flex-1"><a class="" href="index.html">INÍCIO</a></li>
+                            <li class="flex-1"><a href="sobre.html">SOBRE</a></li>
+                            <li class="flex-1"><a href="contatos.html">CONTATO</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav-search">
+                        <form id="form-search" name="form-search" action="#" class="flex center">
+                            <input type="text" id="text-search" name="text-search" placeholder="Buscar" />
+                            <input type="button" id="search-submit" name="search-submit" value="" onclick="submitForm('text-search')" />
+                        </form>
+                    </div>
+                    <div class="">
+                        <span class="btn-menu" onclick="exibeMenu()"></span>
+                    </div>
+                </nav>
+                <div id="menu" class="menu">
+                    <ul>
+                        <li class="menu-item"><a class="" href="index.html">INÍCIO</a></li>
+                        <li class="menu-item"><a href="sobre.html">SOBRE</a></li>
+                        <li class="menu-item"><a href="contatos.html">CONTATO</a></li>
+                    </ul>
+                    <div class="menu-search">
+                        <form id="form-menu-search" name="form-menu-search" action="#" class="flex center">
+                            <input type="text" id="menu-text-search" name="text-search" placeholder="Buscar" />
+                            <input type="button" id="menu-search-submit" name="search-submit" onclick="submitForm('menu-text-search')" value="" />
+                        </form>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="topo">
+        <div class="titulo">
+            <h1>Problemas ambientais </h1>
+        </div>
+    </div>
+    <div class="poluicao">
+        <h1>Poluição atmosférica:</h1>
+        <p>No cenário contemporâneo, a poluição atmosférica emerge como um desafio premente que transcende fronteiras
+            geográficas e afeta milhões de vidas em todo o mundo. De metrópoles movimentadas a recantos remotos, a
+            presença de poluentes no ar é uma realidade que não pode ser ignorada. A poluição atmosférica, resultado de
+            uma interseção complexa de atividades industriais, transporte, agricultura e práticas cotidianas, representa
+            uma ameaça significativa para a saúde humana, a biodiversidade e o clima global.</p>
+    </div>
+    <div class="corpo">
+        <h2>Dados e estatíscas:</h2>
+        <p>Segundo a Organização Mundial da Saúde (OMS), a poluição do ar é responsável por cerca de 7 milhões de mortes
+            prematuras a cada ano.
+            Estima-se que a exposição a partículas finas (PM2,5) contribua para 4,2 milhões de mortes prematuras
+        </p>
+    </div>
+    <div class="poluiçãoatomosferica">
+        <div class="text-left">
+            <h2>Dados e estatíscas:</h2>
+
+            <li>Segundo a Organização Mundial da Saúde (OMS), a poluição do ar é responsável por cerca de 7 milhões
+                de mortes prematuras a cada ano. </li>
+            <li> Estima-se que a exposição a partículas finas (PM2,5) contribua para 4,2 milhões de mortes
+                prematuras anualmente.</li>
+            <li> A poluição do ar está associada a uma variedade de doenças respiratórias, cardiovasculares e
+                cânceres.</li>
+            </p>
+        </div>
+        <div class="text-right">
+            <h2>Emissões de Gases de Efeito Estufa:</h2>
+
+            <li> As emissões de gases de efeito estufa provenientes da queima de combustíveis fósseis são uma das
+                principais causas do aquecimento global.</li>
+            <li>O dióxido de carbono (CO2) é o principal gás de efeito estufa liberado pela queima de combustíveis
+                fósseis, representando cerca de 75% das emissões globais. </li>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/pexels-pixabay-459728.jpg" alt="Imagem">
+    </div>
+
+    <div class="aquecimento">
+        <h1>Aquecimento global:</h1>
+        <p> É uma ameaça cada vez mais evidente para a biodiversidade do nosso planeta, desempenhando um papel
+            significativo na extinção de animais em todo o mundo. À medida que as temperaturas médias aumentam, os
+            habitats naturais dos animais enfrentam mudanças drásticas e muitas vezes rápidas, tornando-se inadequados
+            para sua sobrevivência. Espécies adaptadas a ambientes específicos enfrentam desafios para migrar ou se
+            ajustar a novas condições, levando a uma diminuição da diversidade genética e, em última instância, à
+            extinção. Além disso, eventos climáticos extremos, como secas prolongadas, incêndios florestais e
+            tempestades intensas, amplificados pelo aquecimento global, exacerbam ainda mais a pressão sobre as
+            populações animais já vulneráveis. Proteger essas espécies ameaçadas não é apenas uma questão de
+            conservação, mas também uma necessidade vital para a saúde dos ecossistemas e para o futuro do nosso
+            planeta.</p>
+    </div>
+    <div class="aquecimento2">
+        <div class="conteudo">
+            <div class="texto">
+                <h2>Dados e estatíscas:</h2>
+                <p>Perda de Habitat: Estima-se que mais de 80% dos animais terrestres e marinhos dependem das florestas
+                    tropicais, das quais mais de 17 milhões de hectares são perdidos anualmente devido ao desmatamento,
+                    impulsionado em parte pelo aquecimento global.</p>
+            </div>
+            <div class="imagem">
+                <img src="img/ariranha.jpg" alt="Imagem">
+            </div>
+        </div>
+    </div>
+
+    <div class="poluicaohidrica">
+        <h1>Poluição hidrica e solos:</h1>
+        <p> A poluição hídrica e do solo é uma preocupação global que ameaça a biodiversidade e a sustentabilidade dos
+            ecossistemas. O despejo indiscriminado de resíduos industriais, agrícolas e domésticos nos corpos d'água e
+            no solo resulta na degradação dos habitats naturais e na contaminação de recursos essenciais para a vida.
+            Essa poluição contribui significativamente para a extinção de espécies aquáticas e terrestres, comprometendo
+            a cadeia alimentar e afetando a saúde humana. Ações urgentes são necessárias para controlar e reduzir a
+            poluição, promovendo práticas sustentáveis de gestão de resíduos e conservação ambiental. Somente através de
+            esforços conjuntos e políticas eficazes podemos proteger nossos recursos naturais e evitar a extinção de
+            espécies vulneráveis.</p>
+    </div>
+
+    <div class="container">
+        <div class="images-container">
+            <img src="img/pexels-n-voitkevich-4813970.jpg" alt="Imagem 1">
+            <!-- <img src="img/pexels-kelly-1179532-2533743.jpg" alt="Imagem 2"> -->
+        </div>
+
+        <div class="text-container">
+            <h2>Poluição Hídrica:</h2>
+            <p>
+                De acordo com a Organização das Nações Unidas para Alimentação e Agricultura (FAO), estima-se que cerca
+                de 80% das águas residuais em todo o mundo são despejadas de volta no ambiente sem tratamento adequado.
+                A Agência de Proteção Ambiental dos Estados Unidos (EPA) relata que mais de 1,2 trilhão de galões de
+                esgoto, escoam para os corpos d'água dos EUA anualmente, poluindo rios, lagos e oceanos.</p>
+            <h2>Poluição do Solo:</h2>
+            <p>
+                A Organização das Nações Unidas (ONU) estima que cerca de 24 bilhões de toneladas de solo fértil são
+                perdidas anualmente devido à degradação do solo, que inclui processos como erosão, contaminação e
+                compactação.
+                A poluição do solo por produtos químicos agrícolas, como pesticidas e fertilizantes, é uma preocupação
+                crescente. Relatórios indicam que aproximadamente 25% dos solos aráveis em todo o mundo estão altamente
+                degradados devido ao uso excessivo desses produtos químicos.
+
+                Uma estatística significativa sobre a poluição do solo é que, de acordo com a Organização das Nações
+                Unidas para a Alimentação e a Agricultura (FAO), cerca de 33% das terras do mundo estão degradadas
+                devido à erosão, salinização, compactação do solo, poluição química e outros fatores.
+
+                Isso significa que uma área de terra equivalente ao tamanho da China e da Índia combinadas está
+                enfrentando algum nível de degradação do solo. Essa degradação do solo tem impactos sérios na produção
+                de alimentos, na segurança alimentar, na biodiversidade e no funcionamento dos ecossistemas.
+            </p>
+        </div>
+    </div>
+
+    <div class="desmatamento">
+        <div class="top-texto">
+            <center>
+                <h2>Desmatamento</h2>
+            </center>
+            <p> O desmatamento é um dos principais impulsionadores da extinção de animais em todo o mundo, especialmente
+                nas regiões tropicais, onde a biodiversidade é excepcionalmente rica. Quando as florestas são derrubadas
+                para dar lugar a atividades humanas como agricultura, mineração e urbanização, os habitats vitais dos
+                animais desaparecem, deixando muitas espécies em perigo. A perda de habitat é apenas o começo: o
+                desmatamento também aumenta a vulnerabilidade dos animais a outras ameaças, como caça ilegal e tráfico
+                de animais selvagens, que contribuem significativamente para o declínio das populações animais. Além
+                disso, a fragmentação das florestas resultante do desmatamento pode isolar populações animais, reduzindo
+                a diversidade genética e aumentando a suscetibilidade a doenças e outros fatores ambientais adversos.
+
+                Para preservar a diversidade biológica e evitar a perda irreparável de espécies, é crucial implementar
+                medidas eficazes de conservação e promover práticas sustentáveis de uso da terra. Isso inclui a criação
+                e a proteção de áreas protegidas, corredores ecológicos e reservas naturais, bem como o desenvolvimento
+                de políticas que desestimulem o desmatamento e incentivem a restauração de habitats degradados. Além
+                disso, é essencial combater ativamente a caça ilegal e o comércio de animais selvagens, fortalecendo a
+                aplicação da lei e aumentando a conscientização sobre os impactos devastadores dessas atividades. Ao
+                proteger as florestas e os habitats naturais, não apenas salvaguardamos a diversidade biológica do nosso
+                planeta, mas também garantimos a sobrevivência de inúmeras espécies animais e o equilíbrio dos
+                ecossistemas globais, que são fundamentais para o bem-estar humano.</p>
+
+            <!-- <center> <h2>Dados:</h2></center>  -->
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th> </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Área de Floresta Perdida Anualmente:</td>
+                    <td>Entre 2001 e 2020, uma média de aproximadamente 10 milhões de hectares de floresta foram
+                        perdidos anualmente em todo o mundo devido ao desmatamento.</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Espécies Terrestres Afetadas:</td>
+                    <td>Cerca de 15.000 espécies de plantas e animais correm o risco de extinção devido ao desmatamento
+                        de suas áreas de habitat.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Impacto na Cadeia Alimentar:</td>
+                    <td>O desmatamento pode resultar na perda de até 50% das espécies animais em ecossistemas florestais
+                        afetados, devido à redução na disponibilidade de alimentos e à degradação do habitat.</td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+        </div>
+
+
+        <div class="card">
+            <img src="img/pexels-oandremoura-2532064.jpg" alt="Imagem do Card">
+            <div class="card-content">
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="rodape">
+            <div>
+                <img class="footer-image" src="img/logo-nav.png" alt="logo" />
+            </div>
+    
+            <div>
+             <p>Equipe</p>
+            </div>
+    
+            <div>
+                <p>Fale conosco</p>
+            </div>
+
+            <div>
+                <h2>
+                    Siga-nos em<br />
+                    nossas redes:
+                </h2>
+                <ul class="medias-sociais">
+                    <li>
+                        <a class="facebook" href="https://facebook.com" ></a>
+                    </li>
+                    <li>
+                        <a class="twitter" href="https://twitter.com" ></a>
+                    </li>
+                    <li>
+                        <a class="instagram" href="https://instagram.com" ></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script type="text/javascript" src="js/navbar.js"></script>
+
+</body>
+</html>

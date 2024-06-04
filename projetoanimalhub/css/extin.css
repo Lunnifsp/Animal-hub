@@ -1,0 +1,22 @@
+
+.tx1 h1{
+    font-size:75px;
+}
+.tx2 h3{
+    font-size: 30px;
+}
+
+.tx3 h3{
+    font-size: 40px;
+}
+.tx3 p{
+    font-size:32px;
+}
+.container {
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+  }
+  
+  .texto {
+    width: 50%; /* Definindo uma largura de 50% para cada texto */
+    border: 1px solid #000; /* Apenas para visualização, pode ser removido */
+  }
